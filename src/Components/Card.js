@@ -1,4 +1,4 @@
-import react from "react";
+
 import { useState } from "react/cjs/react.development";
 import Modal from "./Modal";
 const Card = ({ book }) => {
@@ -12,7 +12,7 @@ const Card = ({ book }) => {
                 book.map((item) => {
                     let thumbnail=item.volumeInfo.imageLinks && item.volumeInfo.imageLinks.smallThumbnail;
                     let amount=item.saleInfo.listPrice && item.saleInfo.listPrice.amount;
-                    if(thumbnail!= undefined && amount !=undefined)
+                    if(thumbnail!== undefined && amount !==undefined)
                     {
                         return (
                             <>
@@ -27,7 +27,7 @@ const Card = ({ book }) => {
                             </>
                         )
                     }
-                    
+                    return null;
                 })
             }
 
